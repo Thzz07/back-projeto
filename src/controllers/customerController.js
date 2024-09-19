@@ -1,9 +1,9 @@
-import {getAllCustomers} from '../services/customerService.js';
+import {getAllCustomers} from '../services/customerServices.js';
 
 export const  getCustomer = async(req, res) => {
     try{
         const customer = await getAllCustomers();
-        res.jason(customer)
+        res.json(customer)
     }
     catch (error) {
         res.status(500).json({
